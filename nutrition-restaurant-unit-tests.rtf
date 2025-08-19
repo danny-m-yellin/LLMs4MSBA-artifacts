@@ -1,0 +1,59 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red9\green9\blue9;\red18\green51\blue230;\red17\green109\blue18;
+}
+{\*\expandedcolortbl;;\csgenericrgb\c3529\c3529\c3529;\csgenericrgb\c7059\c20000\c90196;\csgenericrgb\c6667\c42745\c7059;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww17460\viewh9020\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf2 ALL_TESTS = \{\
+    \cf3 1\cf2 : \cf4 "1. registration of owner with incorrect password (401). "\cf2 ,\
+    \cf3 2\cf2 : \cf4 "2. registration of owner with correct password (201). "\cf2 ,\
+    \cf3 3\cf2 : \cf4 "3. registration of 4 non-owners (201). "\cf2 ,\
+    \cf3 4\cf2 : \cf4 "4. registration of user that is already registered (400). "\cf2 ,\
+    \cf3 5\cf2 : \cf4 "5. registration of user with password missing (400). "\cf2 ,\
+    \cf3 6\cf2 : \cf4 "6. login of owner and 3 other registered users. "\cf2 ,\
+    \cf3 7\cf2 : \cf4 "7. login of user with incorrect credentials (401). "\cf2 ,\
+    \cf3 8\cf2 : \cf4 "8. validate OWNER's token and 4 other users' tokens (201). "\cf2 ,\
+    \cf3 9\cf2 : \cf4 "9. validate token but token is invalid (401). "\cf2 ,\
+\
+    \cf3 10\cf2 : \cf4 "10. OWNER POST dish (201). "\cf2 ,\
+    \cf3 11\cf2 : \cf4 "11. OWNER delete dish (204):  GET that dish (404). "\cf2 ,\
+    \cf3 12\cf2 : \cf4 "12. Re-POST deleted dish:  ID should be new ID (201) not old ID. "\cf2 ,\
+    \cf3 13\cf2 : \cf4 "13. POST 4 additional dishes (201). "\cf2 ,\
+    \cf3 14\cf2 : \cf4 "14. UT (update) an already POSTED dish - FRUIT_SALAD_ORIGINAL (200). "\cf2 ,\
+    \cf3 15\cf2 : \cf4 "15. OWNER POST of dish with same name as existing dish - hamburger sandwich (400). "\cf2 ,\
+    \cf3 16\cf2 : \cf4 "16. OWNER POST of dish not in XML - not JSON (415). "\cf2 ,\
+    \cf3 17\cf2 : \cf4 "17. OWNER POST of dish with empty ingredients (400). "\cf2 ,\
+    \cf3 18\cf2 : \cf4 "18. Non-OWNER POST of dish (403). "\cf2 ,\
+    \cf3 19\cf2 : \cf4 "19. Non-OWNER GET /dishes/\{id\} (200). "\cf2 ,\
+    \cf3 20\cf2 : \cf4 "20. Non-OWNER GET all dishes (200). "\cf2 ,\
+    \cf3 21\cf2 : \cf4 "21. Non-OWNER GET all dishes with query string - filter on apple in ingredients (200). "\cf2 ,\
+    \cf3 22\cf2 : \cf4 "22. Non-OWNER GET all dishes with query string - filter on sugar content (200). "\cf2 ,\
+    \cf3 23\cf2 : \cf4 "23. Non-OWNER GET all dishes with query string - filter on apple in ingredients and on total_fat content (200). "\cf2 ,\
+    \cf3 24\cf2 : \cf4 "24. Non-OWNER DELETE /dishes/\{id\} not allowed (403). "\cf2 ,\
+\
+    \cf3 25\cf2 : \cf4 "25. POST profile for 3 people -  Bill, Sally and  Eran. "\cf2 ,\
+    \cf3 26\cf2 : \cf4 "26. POST profile for Bill a second time (400). "\cf2 ,\
+    \cf3 27\cf2 : \cf4 "27. GET of profile/\{id\} for Bill by Bill (200). "\cf2 ,\
+    \cf3 28\cf2 : \cf4 "28. GET of profile/\{id\} for Bill by Sally (401). "\cf2 ,\
+    \cf3 29\cf2 : \cf4 "29. OWNER GET of all profiles (200). "\cf2 ,\
+    \cf3 30\cf2 : \cf4 "30. Sally GET of all profiles (401). "\cf2 ,\
+    \cf3 31\cf2 : \cf4 "31. Eran updates (i.e., PUTs) his profile (200). "\cf2 ,\
+    \cf3 32\cf2 : \cf4 "32. Eran DELETEs his profile (204) and POSTs a new profile (201). "\cf2 ,\
+    \cf3 33\cf2 : \cf4 "33. Eran GET /profileDishes (200). "\cf2 ,\
+    \cf3 34\cf2 : \cf4 "34. GET profile by Bill and Sally(200). "\cf2 ,\
+\
+    \cf3 35\cf2 : \cf4 "35. Bill, Sally and Aya POST ratings for SALAD and Bill rates Hamburger (201). "\cf2 ,\
+    \cf3 36\cf2 : \cf4 "36. GET ratings (200).  2 dishes have been rated so far. "\cf2 ,\
+    \cf3 37\cf2 : \cf4 "37. Bill POSTs rating to the same dish he already rated (400). "\cf2 ,\
+    \cf3 38\cf2 : \cf4 "38. POST rating (201) followed by PUT rating (200). "\cf2 ,\
+    \cf3 39\cf2 : \cf4 "39. 3 more POST ratings for ICECREAM_FAVORITE dish (201). "\
+\
+\cf2 ,\
+    \cf3 40\cf2 : \cf4 "40. GET ratings (200). "\cf2 ,\
+    \cf3 41\cf2 : \cf4 "41. POST a rating  with a float, not int (400). "\cf2 ,\
+    \cf3 42\cf2 : \cf4 "42. GET ratings with query string (200). "\
+\cf2 \}\
+}
